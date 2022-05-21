@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+body {
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    background: hsl(185, 41%, 84%);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo {
+    margin-top: 15%;
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    background: white;
+    margin-top: 15%;
+}
+
+.inside-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input, span {
+    margin-top: 4%;
+}
+span {
+    align-self: flex-start;
+    margin-left: 37px;
+    color: gray;
+    font-size: 0.8rem;
+}
+
+.button-list {
+    display: flex;
+    max-width: 390px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.button {
+    width: 120px;
+    margin: 10px;
+    border-style: none;
+    border-radius: 5px;
+    color: white;
+    height: 35px;
+    background: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: 'Space Mono', monospace;
+}
+
+.top-input {
+    width: 80%;
+    height: 28px;
+    border: none;
+    background: hsl(185, 41%, 84%);
+    border-radius: 5px;
+}
+
+.card-bottom {
+    width: 85%;
+    background: hsl(183, 100%, 15%);
+    height: 200px;
+    border-radius: 15px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.first-result, .second-result {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 8%;
+}
+
+.inside-card-bottom {
+    margin-top: 15%;
+}
+
+.tip {
+    color: white;
+}
+
+.person {
+    color: gray;
+    font-size: 0.8rem;
+}
+
+.price {
+    color: gray;
+    font-size: 1.4rem;
+}
