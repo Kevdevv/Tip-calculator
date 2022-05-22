@@ -61,6 +61,15 @@ span {
     font-family: 'Space Mono', monospace;
 }
 
+.custom {
+    width: 120px;
+    margin: 10px;
+    border: none;
+    background: hsl(185, 41%, 84%);
+    height: 35px;
+
+}
+
 .top-input {
     width: 80%;
     height: 28px;

@@ -132,3 +132,30 @@ function calcul50() {
 
 let button50 = document.getElementById('50')
 button50.addEventListener('click', calcul50)
+
+//Bouton Custom
+
+function calculCustom() {
+    let bill = document.getElementById('bill')
+    let customer = document.getElementById('people')
+    let custom = document.getElementById('custom')
+
+    function amountTips() {
+        return (parseInt(custom.value) * parseInt(bill.value)) / 100
+    }
+
+    let tips = amountTips()
+    let tipsPerPerson = tips / customer.value
+    let totalPerPerson = (parseInt(bill.value) + tips) / customer.value
+
+    if (bill.value, customer.value == 0) {
+        document.getElementById('tip-price').innerHTML = '0€'
+        document.getElementById('total-price').innerHTML = '0€'
+    } else {
+        document.getElementById('tip-price').innerHTML = Math.round(tipsPerPerson * 100) / 100 + ' €'
+        document.getElementById('total-price').innerHTML = Math.round(totalPerPerson * 100) / 100 + ' €'
+    }
+}
+
+let buttonCustom = document.getElementById('custom')
+buttonCustom.addEventListener('change', calculCustom)
