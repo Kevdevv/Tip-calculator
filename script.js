@@ -158,4 +158,9 @@ function calculCustom() {
 }
 
 let buttonCustom = document.getElementById('custom')
+let bill = document.getElementById('bill')
+let customer = document.getElementById('people')
+
 buttonCustom.addEventListener('change', calculCustom)
+bill.addEventListener('change', calculCustom)
+customer.addEventListener('change', calculCustom)
