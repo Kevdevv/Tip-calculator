@@ -173,6 +173,7 @@ function reset() {
     document.getElementById('tip-price').innerHTML = '0€'
     document.getElementById('custom').value = null
     document.getElementById('people').value = null
+    
 }
 
 let resetButton = document.getElementById('reset')

@@ -33,6 +33,12 @@ body {
 input, span {
     margin-top: 4%;
 }
+input {
+    font-family: 'Space Mono', monospace;
+    color: hsl(183, 100%, 15%);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
 
 span {
     align-self: flex-start;
@@ -81,6 +87,8 @@ button {
     border: none;
     background: hsl(185, 41%, 84%);
     height: 35px;
+    border-radius: 5px;
+    text-align: center;
 
 }
 
