@@ -148,7 +148,7 @@ function calculCustom() {
     let tipsPerPerson = tips / customer.value
     let totalPerPerson = (parseInt(bill.value) + tips) / customer.value
 
-    if (bill.value, customer.value == 0) {
+    if (bill.value, customer.value, custom.value == 0) {
         document.getElementById('tip-price').innerHTML = '0€'
         document.getElementById('total-price').innerHTML = '0€'
     } else {
