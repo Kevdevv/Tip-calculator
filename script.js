@@ -166,7 +166,7 @@ buttonCustom.addEventListener('change', calculCustom)
 bill.addEventListener('change', calculCustom)
 customer.addEventListener('change', calculCustom)
 
-
+//Bouton reset
 function reset() {
     document.getElementById('bill').value = null
     document.getElementById('total-price').innerHTML = '0€'
@@ -178,3 +178,13 @@ function reset() {
 let resetButton = document.getElementById('reset')
 
 resetButton.addEventListener('click', reset)
+
+//ajout de la fonction jquery pour le switch de class sur les bouton
+
+$(() => {
+    $('button').click(function () {
+        $('button').removeClass('button')
+
+        $(this).addClass('button')
+    })
+})

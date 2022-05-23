@@ -54,6 +54,19 @@ span {
     margin: 10px;
     border-style: none;
     border-radius: 5px;
+    color: hsl(183, 100%, 15%);
+    height: 35px;
+    background: hsl(184, 14%, 56%);
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: 'Space Mono', monospace;
+}
+
+button {
+    width: 120px;
+    margin: 10px;
+    border-style: none;
+    border-radius: 5px;
     color: white;
     height: 35px;
     background: hsl(183, 100%, 15%);
@@ -119,8 +132,9 @@ span {
 }
 
 #reset {
-    background: gray;
+    background: hsl(184, 14%, 56%);
     margin-top: 5%;
+    color: hsl(183, 100%, 15%);
 }
 
 .reset-button {
