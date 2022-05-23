@@ -14,11 +14,11 @@ function calcul5() {
     let totalPerPerson = (parseInt(bill.value) + tips) / customer.value
 
     if (bill.value > 0 && customer.value > 0) {
-        document.getElementById('tip-price').innerHTML = Math.round(tipsPerPerson * 100) / 100 + ' €'
-        document.getElementById('total-price').innerHTML = Math.round(totalPerPerson * 100) / 100 + ' €'
+        document.getElementById('tip-price').innerHTML = Math.round(tipsPerPerson * 100) / 100 + ' $'
+        document.getElementById('total-price').innerHTML = Math.round(totalPerPerson * 100) / 100 + ' $'
     } else {
-        document.getElementById('tip-price').innerHTML = '0€'
-        document.getElementById('total-price').innerHTML = '0€'
+        document.getElementById('tip-price').innerHTML = '0$'
+        document.getElementById('total-price').innerHTML = '0$'
     }
 }
 
@@ -41,11 +41,11 @@ function calcul10() {
     let totalPerPerson = (parseInt(bill.value) + tips) / customer.value
 
     if (bill.value > 0 && customer.value > 0) {
-        document.getElementById('tip-price').innerHTML = Math.round(tipsPerPerson * 100) / 100 + ' €'
-        document.getElementById('total-price').innerHTML = Math.round(totalPerPerson * 100) / 100 + ' €'
+        document.getElementById('tip-price').innerHTML = Math.round(tipsPerPerson * 100) / 100 + ' $'
+        document.getElementById('total-price').innerHTML = Math.round(totalPerPerson * 100) / 100 + ' $'
     } else {
-        document.getElementById('tip-price').innerHTML = '0€'
-        document.getElementById('total-price').innerHTML = '0€'
+        document.getElementById('tip-price').innerHTML = '0$'
+        document.getElementById('total-price').innerHTML = '0$'
     }
 }
 
@@ -68,11 +68,11 @@ function calcul15() {
     let totalPerPerson = (parseInt(bill.value) + tips) / customer.value
 
     if (bill.value > 0 && customer.value > 0) {
-        document.getElementById('tip-price').innerHTML = Math.round(tipsPerPerson * 100) / 100 + ' €'
-        document.getElementById('total-price').innerHTML = Math.round(totalPerPerson * 100) / 100 + ' €'
+        document.getElementById('tip-price').innerHTML = Math.round(tipsPerPerson * 100) / 100 + ' $'
+        document.getElementById('total-price').innerHTML = Math.round(totalPerPerson * 100) / 100 + ' $'
     } else {
-        document.getElementById('tip-price').innerHTML = '0€'
-        document.getElementById('total-price').innerHTML = '0€'
+        document.getElementById('tip-price').innerHTML = '0$'
+        document.getElementById('total-price').innerHTML = '0$'
     }
 }
 
@@ -95,11 +95,11 @@ function calcul25() {
     let totalPerPerson = (parseInt(bill.value) + tips) / customer.value
 
     if (bill.value > 0 && customer.value > 0) {
-        document.getElementById('tip-price').innerHTML = Math.round(tipsPerPerson * 100) / 100 + ' €'
-        document.getElementById('total-price').innerHTML = Math.round(totalPerPerson * 100) / 100 + ' €'
+        document.getElementById('tip-price').innerHTML = Math.round(tipsPerPerson * 100) / 100 + ' $'
+        document.getElementById('total-price').innerHTML = Math.round(totalPerPerson * 100) / 100 + ' $'
     } else {
-        document.getElementById('tip-price').innerHTML = '0€'
-        document.getElementById('total-price').innerHTML = '0€'
+        document.getElementById('tip-price').innerHTML = '0$'
+        document.getElementById('total-price').innerHTML = '0$'
     }
 }
 
@@ -122,11 +122,11 @@ function calcul50() {
     let totalPerPerson = (parseInt(bill.value) + tips) / customer.value
 
     if (bill.value > 0 && customer.value > 0) {
-        document.getElementById('tip-price').innerHTML = Math.round(tipsPerPerson * 100) / 100 + ' €'
-        document.getElementById('total-price').innerHTML = Math.round(totalPerPerson * 100) / 100 + ' €'
+        document.getElementById('tip-price').innerHTML = Math.round(tipsPerPerson * 100) / 100 + ' $'
+        document.getElementById('total-price').innerHTML = Math.round(totalPerPerson * 100) / 100 + ' $'
     } else {
-        document.getElementById('tip-price').innerHTML = '0€'
-        document.getElementById('total-price').innerHTML = '0€'
+        document.getElementById('tip-price').innerHTML = '0$'
+        document.getElementById('total-price').innerHTML = '0$'
     }
 }
 
@@ -150,11 +150,11 @@ function calculCustom() {
     let totalPerPerson = (parseInt(bill.value) + tips) / customer.value
 
     if (bill.value > 0 && customer.value > 0 && custom.value > 0) {
-        document.getElementById('tip-price').innerHTML = Math.round(tipsPerPerson * 100) / 100 + ' €'
-        document.getElementById('total-price').innerHTML = Math.round(totalPerPerson * 100) / 100 + ' €'
+        document.getElementById('tip-price').innerHTML = Math.round(tipsPerPerson * 100) / 100 + ' $'
+        document.getElementById('total-price').innerHTML = Math.round(totalPerPerson * 100) / 100 + ' $'
     } else {
-        document.getElementById('tip-price').innerHTML = '0€'
-        document.getElementById('total-price').innerHTML = '0€'
+        document.getElementById('tip-price').innerHTML = '0$'
+        document.getElementById('total-price').innerHTML = '0$'
     }
 }
 
@@ -169,8 +169,8 @@ customer.addEventListener('change', calculCustom)
 //Bouton reset
 function reset() {
     document.getElementById('bill').value = null
-    document.getElementById('total-price').innerHTML = '0€'
-    document.getElementById('tip-price').innerHTML = '0€'
+    document.getElementById('total-price').innerHTML = '0$'
+    document.getElementById('tip-price').innerHTML = '0$'
     document.getElementById('custom').value = null
     document.getElementById('people').value = null
     
