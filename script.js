@@ -165,3 +165,16 @@ let customer = document.getElementById('people')
 buttonCustom.addEventListener('change', calculCustom)
 bill.addEventListener('change', calculCustom)
 customer.addEventListener('change', calculCustom)
+
+
+function reset() {
+    document.getElementById('bill').value = null
+    document.getElementById('total-price').innerHTML = '0€'
+    document.getElementById('tip-price').innerHTML = '0€'
+    document.getElementById('custom').value = null
+    document.getElementById('people').value = null
+}
+
+let resetButton = document.getElementById('reset')
+
+resetButton.addEventListener('click', reset)

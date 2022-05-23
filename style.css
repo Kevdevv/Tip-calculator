@@ -117,3 +117,14 @@ span {
     color: gray;
     font-size: 1.4rem;
 }
+
+#reset {
+    background: gray;
+    margin-top: 5%;
+}
+
+.reset-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
