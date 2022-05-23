@@ -21,18 +21,19 @@ body {
     border-radius: 15px;
     background: white;
     margin-top: 15%;
+    
 }
 
 .inside-card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 input, span {
     margin-top: 4%;
 }
+
 span {
     align-self: flex-start;
     margin-left: 37px;
@@ -91,6 +92,10 @@ span {
     display: flex;
     justify-content: space-around;
     margin-top: 8%;
+}
+
+.tip {
+    width: 100px;
 }
 
 
