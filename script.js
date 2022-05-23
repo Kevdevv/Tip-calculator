@@ -164,3 +164,4 @@ let customer = document.getElementById('people')
 buttonCustom.addEventListener('change', calculCustom)
 bill.addEventListener('change', calculCustom)
 customer.addEventListener('change', calculCustom)
+//test
