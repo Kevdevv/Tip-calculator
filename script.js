@@ -1,5 +1,10 @@
-//Bouton 5%
+//Corection et/ou ajout a faire
 
+//Quand tous les champs sont rempli et le calcul fait et qu'on change le nombre de personne, le resultat redonne 0
+//Ajout fonction : le bouton reset devrait reset l'etat des bouton aussi
+//Ajout fonction : rentrer dans le champs custom devrait reset l'etat des bouton
+
+//Bouton 5%
 function calcul5() {
     let bill = document.getElementById('bill')
     let customer = document.getElementById('people')
