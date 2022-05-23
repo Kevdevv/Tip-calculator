@@ -41,8 +41,6 @@ input {
 }
 
 span {
-    align-self: flex-start;
-    margin-left: 37px;
     color: gray;
     font-size: 0.8rem;
 }
