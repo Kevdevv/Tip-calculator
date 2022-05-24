@@ -170,8 +170,20 @@ let bill = document.getElementById('bill')
 let customer = document.getElementById('people')
 
 buttonCustom.addEventListener('change', calculCustom)
+buttonCustom.addEventListener('click', removeClass)
 bill.addEventListener('change', calculCustom)
 customer.addEventListener('change', calculCustom)
+
+//Fonction remove pour l'input custom
+function removeClass()  {
+
+   let allElements = document.getElementsByTagName('button');
+   for (i = 0; i < allElements.length; i++)
+   { 
+    allElements[i].classList.remove('button');
+   }
+  }
+
 
 //Bouton reset
 function reset() {
