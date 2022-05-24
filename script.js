@@ -2,7 +2,6 @@
 
 //Quand tous les champs sont rempli et le calcul fait et qu'on change le nombre de personne, le resultat redonne 0
 //Ajout fonction : le bouton reset devrait reset l'etat des bouton aussi
-//Ajout fonction : rentrer dans le champs custom devrait reset l'etat des bouton
 //Ajout fonction : verification de formulaire et design qui va avec si condition non remplie
 //Faire une version desktop
 
@@ -198,6 +197,7 @@ function reset() {
 let resetButton = document.getElementById('reset')
 
 resetButton.addEventListener('click', reset)
+resetButton.addEventListener('click', removeClass)
 
 //ajout de la fonction jquery pour le switch de class sur les bouton
 
