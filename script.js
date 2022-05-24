@@ -1,7 +1,6 @@
 //Corection et/ou ajout a faire
 
-//Quand tous les champs sont rempli et le calcul fait et qu'on change le nombre de personne, le resultat redonne 0
-//Ajout fonction : le bouton reset devrait reset l'etat des bouton aussi
+//Correstion : Quand tous les champs sont rempli et le calcul fait et qu'on change le nombre de personne, le resultat redonne 0
 //Ajout fonction : verification de formulaire et design qui va avec si condition non remplie
 //Faire une version desktop
 
@@ -30,6 +29,7 @@ function calcul5() {
 
 let button5 = document.getElementById('5')
 button5.addEventListener('click', calcul5)
+button5.addEventListener('click', resetCustom)
 
 //Bouton 10%
 
@@ -57,6 +57,7 @@ function calcul10() {
 
 let button10 = document.getElementById('10')
 button10.addEventListener('click', calcul10)
+button10.addEventListener('click', resetCustom)
 
 //Bouton 15%
 
@@ -84,6 +85,7 @@ function calcul15() {
 
 let button15 = document.getElementById('15')
 button15.addEventListener('click', calcul15)
+button15.addEventListener('click', resetCustom)
 
 //Bouton 25%
 
@@ -111,13 +113,14 @@ function calcul25() {
 
 let button25 = document.getElementById('25')
 button25.addEventListener('click', calcul25)
+button25.addEventListener('click', resetCustom)
 
 //Bouton 50% 
 
 function calcul50() {
     let bill = document.getElementById('bill')
     let customer = document.getElementById('people')
-    let button25 = document.getElementById('50')
+    let button50 = document.getElementById('50')
 
     function amountTips() {
         return (parseInt(button50.value) * parseInt(bill.value)) / 100
@@ -139,6 +142,7 @@ function calcul50() {
 
 let button50 = document.getElementById('50')
 button50.addEventListener('click', calcul50)
+button50.addEventListener('click', resetCustom)
 
 //Bouton Custom
 
@@ -172,8 +176,10 @@ buttonCustom.addEventListener('change', calculCustom)
 buttonCustom.addEventListener('click', removeClass)
 bill.addEventListener('change', calculCustom)
 customer.addEventListener('change', calculCustom)
+bill.addEventListener('click', removeClass)
+customer.addEventListener('click', removeClass)
 
-//Fonction remove pour l'input custom
+//Fonction remove pour l'input custom et le bouton reset
 function removeClass()  {
 
    let allElements = document.getElementsByTagName('button');
@@ -184,6 +190,7 @@ function removeClass()  {
   }
 
 
+
 //Bouton reset
 function reset() {
     document.getElementById('bill').value = null
@@ -192,6 +199,12 @@ function reset() {
     document.getElementById('custom').value = null
     document.getElementById('people').value = null
     
+}
+
+//Fonction reset du champs custom par les boutton %
+
+function resetCustom() {
+    document.getElementById('custom').value = null
 }
 
 let resetButton = document.getElementById('reset')
