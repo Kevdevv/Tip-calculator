@@ -3,6 +3,9 @@
 //Quand tous les champs sont rempli et le calcul fait et qu'on change le nombre de personne, le resultat redonne 0
 //Ajout fonction : le bouton reset devrait reset l'etat des bouton aussi
 //Ajout fonction : rentrer dans le champs custom devrait reset l'etat des bouton
+//Ajout fonction : verification de formulaire et design qui va avec si condition non remplie
+//ajouter les petit logo dans les input
+//Faire une version desktop
 
 //Bouton 5%
 function calcul5() {
