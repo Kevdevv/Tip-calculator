@@ -4,9 +4,7 @@
 //Ajout fonction : le bouton reset devrait reset l'etat des bouton aussi
 //Ajout fonction : rentrer dans le champs custom devrait reset l'etat des bouton
 //Ajout fonction : verification de formulaire et design qui va avec si condition non remplie
-//ajouter les petit logo dans les input
 //Faire une version desktop
-//Ajouter un fav icon
 
 //Bouton 5%
 function calcul5() {
