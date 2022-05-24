@@ -148,3 +148,17 @@ button {
     align-items: center;
     justify-content: center;
 }
+
+#bill {
+    background-image: url(./icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 95%;
+    padding-left: 4%;
+}
+
+#people {
+    background-image: url(./icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 95%;
+    padding-left: 4%;
+}
