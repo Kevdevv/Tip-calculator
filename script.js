@@ -174,6 +174,7 @@ let customer = document.getElementById('people')
 
 buttonCustom.addEventListener('change', calculCustom)
 buttonCustom.addEventListener('click', removeClass)
+buttonCustom.addEventListener('click', resetPriceByCustom)
 bill.addEventListener('change', calculCustom)
 customer.addEventListener('change', calculCustom)
 bill.addEventListener('click', removeClass)
@@ -199,6 +200,13 @@ function reset() {
     document.getElementById('custom').value = null
     document.getElementById('people').value = null
     
+}
+
+//fonction reset price par le champ custom
+
+function resetPriceByCustom() {
+    document.getElementById('total-price').innerHTML = '0$'
+    document.getElementById('tip-price').innerHTML = '0$'
 }
 
 //Fonction reset du champs custom par les boutton %
