@@ -50,7 +50,9 @@ span {
     max-width: 390px;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     margin-top: 5%;
+    
 }
 
 .button {
@@ -96,6 +98,13 @@ button {
     border: none;
     background: hsl(185, 41%, 84%);
     border-radius: 5px;
+}
+
+.group-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .input-fail {    
@@ -169,4 +178,35 @@ button {
 
 /*Version Desktop*/
 
-@media screen and (min-width : 1000px)
+@media screen and (min-width : 1000px) {
+    .card {
+        width: 75%;
+    }
+
+    .inside-card {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .button-list {
+        justify-content: flex-start;
+    }
+
+    .group-input {
+        align-items: flex-start;
+        margin-top: -20%;
+    }
+
+    .logo {
+        margin-top: 10%;
+    }
+
+    .card {
+        margin-top: 10%;
+    }
+
+    .card-bottom {
+        height: 450px;
+        margin: 2%;
+    }
+}
