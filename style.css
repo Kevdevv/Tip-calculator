@@ -98,6 +98,10 @@ button {
     border-radius: 5px;
 }
 
+.input-fail {    
+    border: solid red;
+}
+
 .card-bottom {
     width: 85%;
     background: hsl(183, 100%, 15%);

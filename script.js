@@ -1,7 +1,6 @@
 //Corection et/ou ajout a faire
 
 //Correstion : Quand tous les champs sont rempli et le calcul fait et qu'on change le nombre de personne, le resultat redonne 0
-//Ajout fonction : verification de formulaire et design qui va avec si condition non remplie
 //Faire une version desktop
 
 //Bouton 5%
@@ -24,6 +23,20 @@ function calcul5() {
     } else {
         document.getElementById('tip-price').innerHTML = '0$'
         document.getElementById('total-price').innerHTML = '0$'
+    }
+
+    if (bill.value == 0) {
+        document.getElementById('bill-fail').innerHTML = 'Enter the amount of the bill'
+        addClassBillInput()
+    } else {
+        document.getElementById('bill-fail').innerHTML = 'Bill'
+    }
+
+    if (customer.value == 0) {
+        document.getElementById('people-fail').innerHTML = 'Enter the number of people'
+        addClassCustomerInput()
+    } else {
+        document.getElementById('people-fail').innerHTML = 'Number of people'
     }
 }
 
@@ -53,6 +66,20 @@ function calcul10() {
         document.getElementById('tip-price').innerHTML = '0$'
         document.getElementById('total-price').innerHTML = '0$'
     }
+
+    if (bill.value == 0) {
+        document.getElementById('bill-fail').innerHTML = 'Enter the amount of the bill'
+        addClassBillInput()
+    } else {
+        document.getElementById('bill-fail').innerHTML = 'Bill'
+    }
+
+    if (customer.value == 0) {
+        document.getElementById('people-fail').innerHTML = 'Enter the number of people'
+        addClassCustomerInput()
+    } else {
+        document.getElementById('people-fail').innerHTML = 'Number of people'
+    }
 }
 
 let button10 = document.getElementById('10')
@@ -80,6 +107,20 @@ function calcul15() {
     } else {
         document.getElementById('tip-price').innerHTML = '0$'
         document.getElementById('total-price').innerHTML = '0$'
+    }
+
+    if (bill.value == 0) {
+        document.getElementById('bill-fail').innerHTML = 'Enter the amount of the bill'
+        addClassBillInput()
+    } else {
+        document.getElementById('bill-fail').innerHTML = 'Bill'
+    }
+
+    if (customer.value == 0) {
+        document.getElementById('people-fail').innerHTML = 'Enter the number of people'
+        addClassCustomerInput()
+    } else {
+        document.getElementById('people-fail').innerHTML = 'Number of people'
     }
 }
 
@@ -109,6 +150,20 @@ function calcul25() {
         document.getElementById('tip-price').innerHTML = '0$'
         document.getElementById('total-price').innerHTML = '0$'
     }
+
+    if (bill.value == 0) {
+        document.getElementById('bill-fail').innerHTML = 'Enter the amount of the bill'
+        addClassBillInput()
+    } else {
+        document.getElementById('bill-fail').innerHTML = 'Bill'
+    }
+
+    if (customer.value == 0) {
+        document.getElementById('people-fail').innerHTML = 'Enter the number of people'
+        addClassCustomerInput()
+    } else {
+        document.getElementById('people-fail').innerHTML = 'Number of people'
+    }
 }
 
 let button25 = document.getElementById('25')
@@ -136,6 +191,20 @@ function calcul50() {
     } else {
         document.getElementById('tip-price').innerHTML = '0$'
         document.getElementById('total-price').innerHTML = '0$'
+    }
+
+    if (bill.value == 0) {
+        document.getElementById('bill-fail').innerHTML = 'Enter the amount of the bill'
+        addClassBillInput()
+    } else {
+        document.getElementById('bill-fail').innerHTML = 'Bill'
+    }
+
+    if (customer.value == 0) {
+        document.getElementById('people-fail').innerHTML = 'Enter the number of people'
+        addClassCustomerInput()
+    } else {
+        document.getElementById('people-fail').innerHTML = 'Number of people'
     }
 }
 
@@ -166,6 +235,20 @@ function calculCustom() {
         document.getElementById('tip-price').innerHTML = '0$'
         document.getElementById('total-price').innerHTML = '0$'
     }
+
+    if (custom.value > 0 && bill.value == 0) {
+        document.getElementById('bill-fail').innerHTML = 'Enter the amount of the bill'
+        addClassBillInput()
+    } else {
+        document.getElementById('bill-fail').innerHTML = 'Bill'
+    }
+
+    if (custom.value > 0 && customer.value == 0) {
+        document.getElementById('people-fail').innerHTML = 'Enter the number of people'
+        addClassCustomerInput()
+    } else {
+        document.getElementById('people-fail').innerHTML = 'Number of people'
+    }
 }
 
 let buttonCustom = document.getElementById('custom')
@@ -178,7 +261,9 @@ buttonCustom.addEventListener('click', resetPriceByCustom)
 bill.addEventListener('change', calculCustom)
 customer.addEventListener('change', calculCustom)
 bill.addEventListener('click', removeClass)
+bill.addEventListener('click', removeClassBillInput)
 customer.addEventListener('click', removeClass)
+customer.addEventListener('click', removeClassCustomerInput)
 
 //Fonction remove pour l'input custom et le bouton reset
 function removeClass()  {
@@ -190,7 +275,30 @@ function removeClass()  {
    }
   }
 
+  //Fonction ajout de class fail pour l'input bill
+function addClassBillInput() {
+    let failInput = document.getElementById('bill')
+    failInput.classList.add('input-fail')
+}
 
+//Fonction remove class fail pour l'input bill
+function removeClassBillInput() {
+    let failInput = document.getElementById('bill')
+    failInput.classList.remove('input-fail')
+}
+
+//Fonction ajout de class fail pour l'input people
+
+function addClassCustomerInput() {
+    let failInput = document.getElementById('people')
+    failInput.classList.add('input-fail')
+}
+
+//Fonction remove class fail pour l'input people
+function removeClassCustomerInput() {
+    let failInput = document.getElementById('people')
+    failInput.classList.remove('input-fail')
+}
 
 //Bouton reset
 function reset() {
@@ -199,6 +307,10 @@ function reset() {
     document.getElementById('tip-price').innerHTML = '0$'
     document.getElementById('custom').value = null
     document.getElementById('people').value = null
+    document.getElementById('bill-fail').innerHTML = 'Bill'
+    document.getElementById('people-fail').innerHTML = 'Number of people'
+    removeClassBillInput()
+    removeClassCustomerInput()
     
 }
 
