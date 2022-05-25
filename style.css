@@ -177,14 +177,6 @@ button {
     padding-left: 4%;
 }
 
-button:hover {
-    background: hsla(183, 100%, 15%, 0.8);;
-}
-
-#reset:hover {
-    transform : scale(1.1, 1.1)
-}
-
 /*Version Desktop*/
 
 @media screen and (min-width : 1000px) {
@@ -260,5 +252,13 @@ button:hover {
 
     .top-input {
         width: 92%;
+    }
+
+    button:hover {
+        background: hsla(183, 100%, 15%, 0.8);;
+    }
+    
+    #reset:hover {
+        transform : scale(1.1, 1.1)
     }
 }
