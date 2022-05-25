@@ -42,7 +42,7 @@ function calcul5() {
 }
 
 let button5 = document.getElementById('5')
-button5.addEventListener('click', calcul5)
+button5.addEventListener('click', calcul5) // button5.addEventListener('click', calcul5())
 button5.addEventListener('click', resetCustom)
 
 //Bouton 10%
@@ -336,3 +336,13 @@ $(() => {
         $(this).addClass('button')
     })
 })
+
+
+/*
+  document.querySelectorAll('.circle').forEach(item => {
+        item.addEventListener('click', function() {
+          let test = item.value * 2
+          alert(test)
+        })
+      })
+*/ 
