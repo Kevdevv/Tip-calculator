@@ -3,6 +3,7 @@
 //Correstion : Quand tous les champs sont rempli et le calcul fait et qu'on change le nombre de personne, le resultat redonne 0
 //Faire une version desktop
 
+
 //Bouton 5%
 function calcul5() {
     let bill = document.getElementById('bill')
@@ -231,25 +232,19 @@ function calculCustom() {
     if (bill.value > 0 && customer.value > 0 && custom.value > 0) {
         document.getElementById('tip-price').innerHTML = Math.round(tipsPerPerson * 100) / 100 + ' $'
         document.getElementById('total-price').innerHTML = Math.round(totalPerPerson * 100) / 100 + ' $'
-    } else {
-        document.getElementById('tip-price').innerHTML = '0$'
-        document.getElementById('total-price').innerHTML = '0$'
     }
 
     if (custom.value > 0 && bill.value == 0) {
-        document.getElementById('bill-fail').innerHTML = 'Enter the amount of the bill'
+        document.getElementById('bill-fail').innerHTML = 'Enter the amount of the bill custom'
         addClassBillInput()
-    } else {
-        document.getElementById('bill-fail').innerHTML = 'Bill'
     }
 
     if (custom.value > 0 && customer.value == 0) {
         document.getElementById('people-fail').innerHTML = 'Enter the number of people'
         addClassCustomerInput()
-    } else {
-        document.getElementById('people-fail').innerHTML = 'Number of people'
     }
 }
+
 
 let buttonCustom = document.getElementById('custom')
 let bill = document.getElementById('bill')
@@ -302,11 +297,11 @@ function removeClassCustomerInput() {
 
 //Bouton reset
 function reset() {
-    document.getElementById('bill').value = null
+    document.getElementById('bill').value = 0
     document.getElementById('total-price').innerHTML = '0$'
     document.getElementById('tip-price').innerHTML = '0$'
     document.getElementById('custom').value = null
-    document.getElementById('people').value = null
+    document.getElementById('people').value = 0
     document.getElementById('bill-fail').innerHTML = 'Bill'
     document.getElementById('people-fail').innerHTML = 'Number of people'
     removeClassBillInput()
