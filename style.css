@@ -123,6 +123,7 @@ button {
 .first-result, .second-result {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin-top: 8%;
 }
 
@@ -183,7 +184,7 @@ button {
     
 
     .card {
-        width: 75%;
+        width: 68%;
     }
 
     .inside-card {
@@ -191,21 +192,40 @@ button {
         flex-direction: row;
     }
 
-    .button-list {
-        justify-content: flex-start;
-    }
 
     .group-input {
         align-items: flex-start;
-        margin-top: -20%;
+        margin-top: -4%;
+        margin-left: 2%;
+    }
+
+    .button-list {
+        justify-content: flex-start;
+        margin-top: 3%;
+        max-width: 610px;
+    }
+
+    button {
+        width: 180px;
+        height: 50px;
+        font-size: 1.3rem;
+        margin-left: 0;
+    }
+
+    .custom {
+        width: 180px;
+        height: 50px;
+        font-size: 1.3rem;
+        margin-left: 0;
     }
 
     .logo {
-        margin-top: 10%;
+        margin-top: 5%;
     }
 
     .card {
-        margin-top: 10%;
+        margin-top: 5%;
+        min-width: 900px;
     }
 
     .card-bottom {
@@ -213,4 +233,20 @@ button {
         margin: 2%;
     }
 
+    .price {
+        font-size: 3.5rem;
+    }
+
+    #reset {
+        width: 75%;
+        margin-top: 20%;
+        height: 50px;
+    }
+
+    .button {
+        width: 180px;
+        height: 50px;
+        font-size: 1.3rem;
+        margin-left: 0; 
+    }
 }
