@@ -297,11 +297,11 @@ function removeClassCustomerInput() {
 
 //Bouton reset
 function reset() {
-    document.getElementById('bill').value = 0
+    document.getElementById('bill').value = null
     document.getElementById('total-price').innerHTML = '0$'
     document.getElementById('tip-price').innerHTML = '0$'
     document.getElementById('custom').value = null
-    document.getElementById('people').value = 0
+    document.getElementById('people').value = null
     document.getElementById('bill-fail').innerHTML = 'Bill'
     document.getElementById('people-fail').innerHTML = 'Number of people'
     removeClassBillInput()
