@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Space Mono', monospace;
@@ -251,7 +254,8 @@ button {
     }
 
     .top-input {
-        width: 92%;
+        width: 100%;
+        max-width: 553px;
     }
 
     button:hover {
