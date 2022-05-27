@@ -11,7 +11,7 @@ function calculCustom() {
 
     let tips = amountTips()
     let tipsPerPerson = tips / customer.value
-    let totalPerPerson = (parseInt(bill.value) + tips) / customer.value
+    let totalPerPerson = (parseInt(bill.value) + tips) / customer.value    
 
     if (bill.value > 0 && customer.value > 0 && custom.value > 0) {
         document.getElementById('tip-price').innerHTML = Math.round(tipsPerPerson * 100) / 100 + ' $'
@@ -19,15 +19,60 @@ function calculCustom() {
     }
 
     if (custom.value > 0 && bill.value == 0) {
-        document.getElementById('bill-fail').innerHTML = 'Enter the amount of the bill custom'
+        document.getElementById('bill-fail').innerHTML = 'Enter the amount of the bill'
         addClassBillInput()
+    } else if (custom.value > 0 && bill.value > 0 && customer.value > 0) {
+        document.getElementById('bill-fail').innerHTML = 'Bill'
     }
 
     if (custom.value > 0 && customer.value == 0) {
         document.getElementById('people-fail').innerHTML = 'Enter the number of people'
         addClassCustomerInput()
+    } else if (custom.value > 0 && bill.value > 0 && customer.value > 0) {
+        document.getElementById('people-fail').innerHTML = 'Number of people'
     }
 }
+
+//Fonction calcul pour tous les bouton pourcent
+document.querySelectorAll('.percent-button').forEach(button => {
+    button.addEventListener('click', function () {
+        let bill = document.getElementById('bill')
+        let customer = document.getElementById('people')
+
+        resetCustom()
+
+        function amountTips() {
+            return (parseInt(button.value) * parseInt(bill.value)) / 100
+        }
+
+        let tips = amountTips()
+        let tipsPerPerson = tips / customer.value
+        let totalPerPerson = (parseInt(bill.value) + tips) / customer.value
+
+        if (bill.value > 0 && customer.value > 0) {
+            document.getElementById('tip-price').innerHTML = Math.round(tipsPerPerson * 100) / 100 + ' $'
+            document.getElementById('total-price').innerHTML = Math.round(totalPerPerson * 100) / 100 + ' $'
+        } else {
+            document.getElementById('tip-price').innerHTML = '0$'
+            document.getElementById('total-price').innerHTML = '0$'
+        }
+
+        if (bill.value == 0) {
+            document.getElementById('bill-fail').innerHTML = 'Enter the amount of the bill'
+            addClassBillInput()
+        } else {
+            document.getElementById('bill-fail').innerHTML = 'Bill'
+        }
+
+        if (customer.value == 0) {
+            document.getElementById('people-fail').innerHTML = 'Enter the number of people'
+            addClassCustomerInput()
+        } else {
+            document.getElementById('people-fail').innerHTML = 'Number of people'
+        }
+
+    })
+})
 
 //Fonction remove pour l'input custom et le bouton reset
 function removeClass() {
@@ -105,44 +150,6 @@ $(() => {
     })
 })
 
-//Fcontion calcul pour tous les bouton pourcent
-document.querySelectorAll('.percent-button').forEach(button => {
-    button.addEventListener('click', function () {
-        let bill = document.getElementById('bill')
-        let customer = document.getElementById('people')
-
-        function amountTips() {
-            return (parseInt(button.value) * parseInt(bill.value)) / 100
-        }
-
-        let tips = amountTips()
-        let tipsPerPerson = tips / customer.value
-        let totalPerPerson = (parseInt(bill.value) + tips) / customer.value
-
-        if (bill.value > 0 && customer.value > 0) {
-            document.getElementById('tip-price').innerHTML = Math.round(tipsPerPerson * 100) / 100 + ' $'
-            document.getElementById('total-price').innerHTML = Math.round(totalPerPerson * 100) / 100 + ' $'
-        } else {
-            document.getElementById('tip-price').innerHTML = '0$'
-            document.getElementById('total-price').innerHTML = '0$'
-        }
-
-        if (bill.value == 0) {
-            document.getElementById('bill-fail').innerHTML = 'Enter the amount of the bill'
-            addClassBillInput()
-        } else {
-            document.getElementById('bill-fail').innerHTML = 'Bill'
-        }
-
-        if (customer.value == 0) {
-            document.getElementById('people-fail').innerHTML = 'Enter the number of people'
-            addClassCustomerInput()
-        } else {
-            document.getElementById('people-fail').innerHTML = 'Number of people'
-        }
-
-    })
-})
 //Fin des fonction
 
 let buttonCustom = document.getElementById('custom')
