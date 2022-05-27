@@ -143,7 +143,7 @@ document.querySelectorAll('.percent-button').forEach(button => {
 
     })
 })
-
+//Fin des fonction
 
 let buttonCustom = document.getElementById('custom')
 let bill = document.getElementById('bill')
