@@ -105,7 +105,7 @@ $(() => {
     })
 })
 
-//Fcontion pour tous les bouton pourcent
+//Fcontion calcul pour tous les bouton pourcent
 document.querySelectorAll('.percent-button').forEach(button => {
     button.addEventListener('click', function () {
         let bill = document.getElementById('bill')
